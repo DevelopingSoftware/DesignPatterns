@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Assets.AbstractFactory
 {
-    public interface IAdvert
+    public interface IBannerAdvert
     {
         void Show();
+        void Hide();
     }
 }

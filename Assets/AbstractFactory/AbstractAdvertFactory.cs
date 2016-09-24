@@ -7,6 +7,7 @@ namespace Assets.AbstractFactory
 {
     public abstract class AbstractAdvertFactory
     {
-        public abstract IAdvert CreateAdvert();
+        public abstract IBannerAdvert CreateBannerAdvert();
+        public abstract IVideoAdvert CreateVideoAdvert();
     }
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.AbstractFactory;
+using Assets.AbstractFactory.Android;
+using Assets.AbstractFactory.iOS;
 using System;
 
 namespace Assets.AbstractFactory
@@ -26,9 +28,15 @@ namespace Assets.AbstractFactory
                     throw new Exception("Unable to find advert factory implementation");
             }
 
-            var advert = _advertFactory.CreateAdvert();
-            Debug.Log(advert);
-            advert.Show();
+            var bannerAdvert = _advertFactory.CreateBannerAdvert();
+            Debug.Log(bannerAdvert);
+            bannerAdvert.Show();
+            bannerAdvert.Hide();
+
+            var videoAdvert = _advertFactory.CreateVideoAdvert();
+            Debug.Log(videoAdvert);
+            videoAdvert.Play();
+            videoAdvert.Stop();
         }
     }
 }
